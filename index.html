@@ -1,9 +1,11 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./styles/indexstyle.css">
 	<title>RTO Database project</title>
 </head>
 <body>
+	<!--This section is for navbar-->
 	<nav class="navbar navbar-default" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -11,7 +13,7 @@
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
+				<span class="icon-bar"></psan>
 			</button>
 			<a class="navbar-brand" href="#">RTO</a>
 		</div>
@@ -19,31 +21,89 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Find Vehicle Details</a></li>
-				<li><a href="#">How to apply</a></li>
+				<li class="active"><a href="./TrackVehicle.html">Find Vehicle Details</a></li>
+				<li><a href="./HowToApply.html">How to apply</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Link</a></li>
+				<li><a href="./SignIn.html">SignIn</a></li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Registration Statistics</a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#">Something else here</a></li>
-						<li><a href="#">Separated link</a></li>
+						<li><a href="./Statistics.html">Registration Statistics</a></li>
+						<li><a href="./Aboutus.php">About us</a></li>
+						<li><a href="./dfd.html">DFD</a></li>
+						<li><a href="./ERDiagram.html">ER Diagrams</a></li>
 					</ul>
 				</li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
+
+	<!-- This section is for header-->
 	<div class="jumbotron">
 		<div class="container">
 			<h3>Welcome to Homepage!</h3>
 		</div>
 	</div>
-	<div class="container">
-		<h1>HELLO WORLD!</h1>
+
+	<!-- This section is for main content-->
+	<div class="container" id="main">
+		<!--Left subsection with images-->
+		<div class="col-md-6" id="inside"> 
+			<div id="carousel-id" class="carousel slide" data-ride="carousel">
+			    <ol class="carousel-indicators">
+			        <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+			        <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+			        <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+			    </ol>
+			    <div class="carousel-inner">
+			        <div class="item">
+			            <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojN2E3YTdhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+">
+			            <div class="container">
+			                <div class="carousel-caption">
+			                    <h1>Track you vehicle</h1>
+			                    <p>You can check your vehicle details online.</p>
+			                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Check now</a></p>
+			                </div>
+			            </div>
+			        </div>
+			        <div class="item">
+			            <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzY2NiI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNmE2YTZhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+U2Vjb25kIHNsaWRlPC90ZXh0Pjwvc3ZnPg==">
+			            <div class="container">
+			                <div class="carousel-caption">
+			                    <h1>Registration statistics</h1>
+			                    <p>Check how many vehicles and licences are getting registered </p>
+			                    <a class="btn btn-lg btn-primary" href="#" role="button">View now</a></p>
+			                </div>
+			            </div>
+			        </div>
+			        <div class="item active">
+			            <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNWE1YTVhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+VGhpcmQgc2xpZGU8L3RleHQ+PC9zdmc+">
+			            <div class="container">
+			                <div class="carousel-caption">
+			                    <h1>Online licence application</h1>
+			                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Apply Now</a></p>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			    <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+			    <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+		</div>
+
+		<!--This is for right subsection-->
+		<div class="col-md-6" id="inside">
+			<h3>Applicants, track your application status <a href="./CheckStatus.html"><button type="submit" class="btn btn-primary">here</button></a>
+			</h3>
+			<h3>
+				RTO Officers, please sign in using the sign in button link provided here 
+				<br>
+				<a href="./SignIn.html"><button type="submit" class="btn btn-primary" action="SignIn.html">Sign In</button></a>
+			</h3>
+		</div>
 	</div>
+
 
 	<script src='./scripts/jquery-2.1.4.min.js'></script>
 	<script src='./scripts/bootstrap.min.js'></script>

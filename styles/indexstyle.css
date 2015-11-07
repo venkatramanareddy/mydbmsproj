@@ -1,0 +1,13 @@
+#main{
+	border-color: black;
+	border-style: solid;
+	border-radius: 20px;
+}
+
+#inside{
+
+	border-color: grey;
+	background-color: ;
+	border-radius: 20px;
+	min-height: 300px;
+}

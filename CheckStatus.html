@@ -1,0 +1,42 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
+	<title>Check Application Status</title>
+</head>
+<body>
+	<!--This section is for navbar-->
+
+	<!--This section is for form-->
+	<div class="container">
+		<div class="jumbotron">
+			<form action="" method="POST" role="form">
+				<legend>Enter details</legend>
+			
+				<div class="form-group">
+					<label for="ApplicationKind">Application type:</label>
+					<select name="" id="input" class="form-control">
+						<option value="0">--None--</option>
+						<option value="1">Learning licence</option>
+						<option value="2">Driving licence</option>
+						<option value="3">Vehicle registration</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="Applid">Applicant id:</label>
+					<input type="text" class="form-control" id="" placeholder="Input field">
+				</div>
+				<!--Use it in php code to access various application primary keys-->
+				<div class="form-group">
+					<label for="Primkey">primary key:</label>
+					<input type="text" class="form-control" id="" placeholder="Input field">
+				</div>		
+			
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+
+	<script src='./scripts/jquery-2.1.4.min.js'></script>
+	<script src='./scripts/bootstrap.min.js'></script>
+</body>
+</html>
