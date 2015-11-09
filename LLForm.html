@@ -5,7 +5,7 @@
         <link rel = "stylesheet" type="text/css" href ="./styles/bootstrap.min.css" />
     </head>
     <body>
-        <!-- This is for displaying message after pressing submit button -->
+        <!-- (Modal part)This is for displaying message after pressing submit button -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal-label" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -29,7 +29,7 @@
         <!-- Some header details-->
         <header>
             <div class="jumbotron container">
-                <h2 align="center">Application for Learning Licence</h2>
+                <h2 align="center">Application for Learning Licence</h 2>
             </div>
         </header>
 
@@ -37,62 +37,127 @@
         <div class="container">
             <form role="form" class="form-horizontal">
                 <div class="container">
+                    <!--For First and Last name-->
                     <div class="form-group">
-                        <label for="FName" class="col-sm-3 control-label">First Name:</label>
-                        <div class="col-sm-6">
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-user"></span>
-                                </span>
-                                <input type="text" class="form-control" name="name" id="name" />
-                            </div>
+                        <label for="FName" class="col-sm-4 control-label">First Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="name" id="name" >
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="LName" class="col-sm-3 control-label">Last Name:</label>
-                        <div class="col-sm-6">
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-user"></span>
-                                </span>
-                                <input type="text" class="form-control" name="name" id="name"/>
+                        <label for="LName" class="col-sm-4 control-label">Last Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="name" id="name"/>
+                        </div>
+                    </div>
+                    <!--For date of birth-->
+                    <div class="form-group">
+                        <label for="DOB" class="col-sm-4 control-label">Date of Birth:</label>
+                        <div class="col-sm-4">
+                            <div class="col-sm-4"><input type="date" class="form-control" name="name" id="name" placeholder="Date"/>
                             </div>
+                            <div class="col-sm-4"><input type="month" class="form-control col-sm-3" name="name" id="name" placeholder="Month"/>
+                            </div>
+                            <div class="col-sm-4"><input type="year" class="form-control col-sm-3" name="name" id="name" placeholder="year"/></div>
+                        </div>
+                    </div>
+                    <!--For address line 1 and 2-->
+                    <div class="form-group">
+                        <label for="Addr1" class="col-sm-4 control-label">Address line 1:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="name" id="name"/>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="ALine1" class="col-sm-3 control-label">Address line 1:</label>
-                        <div class="col-sm-6">
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-user"></span>
-                                </span>
-                                <input type="text" class="form-control" name="name" id="name"/>
-                            </div>
+                        <label for="Addr2" class="col-sm-4 control-label">Address line 2:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="name" id="name"/>
                         </div>
                     </div>
+                    <!-- Drop down for district -->
                     <div class="form-group">
-                        <label for="ALine2" class="col-sm-3 control-label">Address line 2:</label>
-                        <div class="col-sm-6">
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-user"></span>
-                                </span>
-                                <input type="text" class="form-control" name="name" id="name"/>
-                            </div>
+                        <label for="District" class="col-sm-4 control-label">District</label>
+                        <div class="col-sm-4">
+                            <select name="" id="input" class="form-control">
+                                <!--All options for districts-->
+                                <option value ="1">Bangalore Urban</option>
+                                <option value ="2">Bangalore Rural</option>
+                            </select>
                         </div>
                     </div>
+                    <!--for phone no-->
                     <div class="form-group">
-                        <label for="PhoneNo" class="col-sm-3 control-label">Phone Number:</label>
-                        <div class="col-sm-6">
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-phone"></span>
-                                </span>
-                                <input type="text" class="form-control" name="name" id="name"/>
-                            </div>
+                        <label for="Phoneno" class="col-sm-4 control-label">Phone number:</label>
+                        <div class="col-sm-4">
+                            <input type="tel" class="form-control" name="name" id="name"/>
                         </div>
                     </div>
-                    <!--This is for displaying captcha-->
+                    <!--For E-mail-->
+                    <div class="form-group">
+                        <label for="Email" class="col-sm-4 control-label">Email id:</label>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" name="name" id="name"/>
+                        </div>
+                    </div>
+                    <!--For address proof selection-->
+                    <div class="form-group">
+                        <label for="ID1type" class="col-sm-4 control-label">Document attached for Address proof:</label>
+                        <div class="radio col-sm-4">
+                            <label>
+                                <input type="radio" name="ID1type" id="input1" value="Aadhar" checked="checked">
+                                Aadhar Card
+                            </label><br/>
+                            <label>
+                                <input type="radio" name="ID1type" id="input2" value="Voter ID">
+                                Voter ID Card
+                            </label><br/>
+                            <label>
+                                <input type="radio" name="ID1type" id="input3" value="Ration Card">
+                                Ration Card
+                            </label><br/>
+                            <label>
+                                <input type="radio" name="ID1type" id="input4" value="PAN Card">
+                                PAN Card
+                            </label>
+                        </div>    
+                    </div>
+                    <!--For address proof attachment-->
+                    <div class="form-group">
+                        <label for="ID1" class="col-sm-4 control-label">Address proof attachment:</label>
+                        <div class="col-sm-4">
+                            <input type="file" class="form-control" name="name" id="name"/>
+                        </div>
+                    </div>
+                    <!--For DOB proof selection-->
+                    <div class="form-group">
+                        <label for="ID2type" class="col-sm-4 control-label">Document attached for Birth Proof:</label>
+                        <div class="radio col-sm-4">
+                            <label>
+                                <input type="radio" name="ID2type" id="input1" value="Birth Certificate" checked="checked">
+                                Birth Certificate
+                            </label><br/>
+                            <label>
+                                <input type="radio" name="ID2type" id="input2" value="Voter ID">
+                                Voter ID Card
+                            </label><br/>
+                            <label>
+                                <input type="radio" name="ID2type" id="input3" value="SSLC Marks Card">
+                                SSLC Marks Card
+                            </label><br/>
+                            <label>
+                                <input type="radio" name="ID2type" id="input4" value="PAN Card">
+                                PAN Card
+                            </label>
+                        </div>    
+                    </div>
+                    <!--For DOB proof attachment-->
+                    <div class="form-group">
+                        <label for="ID2" class="col-sm-4 control-label">Birth proof attachment:</label>
+                        <div class="col-sm-4">
+                            <input type="file" class="form-control" name="name" id="name"/>
+                        </div>
+                    </div>
+                    <!--This is for displaying captcha(just attach your captcha code here)-->
                     <div class="form-group">
                         <p>
                             <img src="/captcha.php" width="120" height="30" border="1" alt="CAPTCHA">
