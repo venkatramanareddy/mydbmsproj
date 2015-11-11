@@ -1,0 +1,54 @@
+<!--This is designed for offline testing for driving licences-->
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
+	<title>RTO DL testing</title>
+</head>
+<body>
+	<!--This section is for navbar-->
+
+	<!--This section is for main-->
+	<div class="container">
+		<div class="jumbotron">
+			<h2>Driving license test</h2>
+		</div>
+	</div>
+
+	<!--Form to accept LLno and indicate pass or fail-->
+	<div class="container col-sm-4 col-sm-offset-4">
+		<form action="" method="POST" class="form-horizontal" role="form">
+			<div class="form-group">
+				<legend>Applicant details</legend>
+			</div>
+		
+			<div class="form-group">
+                <label for="LLNo" class="col-sm-4 control-label">LL no:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" name="name" id="name" >
+                </div>
+            </div>
+
+   			<div class="form-group">
+                <label for="Applno" class="col-sm-4 control-label">Applicant no:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" name="name" id="name" >
+                </div>
+            </div>
+
+            <div class="col-sm-offset-4 col-sm-8">
+   				<div class="form-group col-sm-6">
+					<button type="submit" class="btn btn-danger">Trail failed</button>
+				</div>
+
+				<div class="form-group col-sm-6">
+					<button type="submit" class="btn btn-success">Trial passed</button>
+				</div>
+            </div>
+		</form>
+	</div>
+
+	<!--Script list-->
+	<script src='./scripts/jquery-2.1.4.min.js'></script>
+	<script src='./scripts/bootstrap.min.js'></script>
+</body>
+</html>
