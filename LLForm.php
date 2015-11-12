@@ -94,6 +94,16 @@
 					or die('error querying db');
 					
 					mysqli_close($dbc);
+                    ?>
+                    <h2>
+                    <div class="container">
+                        Congrats! Your form has been successfully submitted!!!<br><br>
+                    </div>
+                    <div class="container">
+                        Your Applicant Id is : <?php echo $appl?><br><br>
+                        Click Here to <a href="">Print the application form</a>
+                    </div>
+                    </h2>
 				}
 			}
 			else
