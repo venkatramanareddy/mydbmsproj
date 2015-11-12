@@ -196,7 +196,7 @@
                     <div class="form-group">
                         <label for="ID1" class="col-sm-4 control-label">Address proof attachment:</label>
                         <div class="col-sm-4">
-                            <input type="file" class="form-control" name="name" id="name"/>
+                            <input type="file" class="form-control" name="address_proof" id="name"/>
                         </div>
                     </div>
                     <!--For DOB proof selection-->
@@ -228,13 +228,8 @@
                             <input type="file" class="form-control" name="dob_proof" id="name"/>
                         </div>
                     </div>
-					<!--For Address proof attachment-->
-					<div class="form-group">
-                        <label for="ID2" class="col-sm-4 control-label">Address proof attachment:</label>
-                        <div class="col-sm-4">
-                            <input type="file" class="form-control" name="address_proof" id="name"/>
-                        </div>
-                    </div>
+					
+					
 					<div class="form-group">
                         <label for="ID2" class="col-sm-4 control-label">Upload your photo:</label>
                         <div class="col-sm-4">
@@ -242,18 +237,8 @@
                         </div>
                     </div>
                     <!--This is for displaying captcha(just attach your captcha code here)-->
-                    <div class="form-group">
-                        <p>
-                            <img src="/captcha.php" width="120" height="30" border="1" alt="CAPTCHA">
-                        </p> 
-                        <p>
-                            <input type="text" size="6" maxlength="5" name="captcha" value="">
-                            <br> 
-                            <small>
-                                copy the digits from the image into this box
-                            </small>
-                        </p>
-                    </div>
+					
+                    
                 </div>
             </form>
             
