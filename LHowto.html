@@ -1,0 +1,120 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./styles/HowToApply.css">
+	<title>Check Application Status</title>
+	<!--For extra features-->
+	<script type="text/javascript">
+		$('.nav-tabs-dropdown').each(function(i, elm) {
+	   
+	    $(elm).text($(elm).next('ul').find('li.active a').text());
+	    
+	});
+	  
+	$('.nav-tabs-dropdown').on('click', function(e) {
+
+	    e.preventDefault();
+	    
+	    $(e.target).toggleClass('open').next('ul').slideToggle();
+	    
+	});
+
+	$('#nav-tabs-wrapper a[data-toggle="tab"]').on('click', function(e) {
+
+	    e.preventDefault();
+	    
+	    $(e.target).closest('ul').hide().prev('a').removeClass('open').text($(this).text());
+	      
+	});
+	</script>
+</head>
+<body>
+	<!--This section is for navbar-->
+
+	<!--This section is for main-->
+
+	<div class="container">
+    <h2>License Applications <small>How-tos</small></h2>
+    <p class="lead">Looking for vehicle registration issues. You can check the FAQ <a href="./RegHowto.html">here</a></p>
+    <!--This contains info-->
+    <div class="row">
+        <div class="col-sm-3">
+            <a href="#" class="nav-tabs-dropdown btn btn-block btn-primary">Tabs</a>
+            <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked wells">
+              <li class="active"><a href="#vtab1" data-toggle="tab">Learning License</a></li>
+              <li><a href="#vtab2" data-toggle="tab">Driving License</a></li>
+              <li><a href="#vtab3" data-toggle="tab">Renewal of License</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9">
+            <div class="tab-content">
+                <!--For LL-->
+                <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
+                    <h3>Learning License</h3>
+                        The following procedure has to be followed for obtaining learner's licence
+                    <ol>
+                    <li>
+                        <p>
+                        The applicant shall use the internet and access Transport Departments website http://www.kar.nic.in and do the browser settings for local settings if he/she is using other than Internet Explorer 8 and above as given in the above online services weblink. After carefully filling up the details and saving the information keyed in you would get Web Application number(SOW-id,Sarathi Over Web)and you have to print Application Form (CMV 2) and approach the relevant Licencing authority. 
+                        </p>
+                        1.1 Three recent passport size photographs required.  <br>
+                        1.2 Proof of address:(to produce any one of the following) <br> 
+                        <ul>
+                            <li>Ration Card</li>
+                            <li>Passport</li>
+                            <li>LIC Policy</li>
+                            <li>Electoral Roll</li>
+                            <li>Telephone Bill</li>
+                            <li>Electricity Bill</li>
+                            <li>Water Bill</li>
+                            <li>Caste Certificate (SC/ST, Backward Class and Minorties, etc.) and Income Certificate issued by Tahasildar.
+                            <li>Pay slip issued by any office of the Central Government or a State Government or a Local body.</li>
+                            <li>Ration CardSelf swearing Affidavit by an applicant before an executive Magistrate or a First Class Judicial Magistrate or a Notary Public as evidence of age and address.</li>
+                            <li>Proof of legal presence in India in addition to proof of residence in case of foreigners.</li>
+                        </ul>
+
+                        1.3 Proof of Age: (to produce any one of the following)  ◦School Certificate.
+                        <ul>
+                            <li>Birth Certificate.</li>
+                            <li>PAN card.</li>
+                            <li>Certificate granted by the registered medical practitioner not below the rank of a Civil Surgeon. </li>
+                            <li>Self swearing Affidavit by an applicant before an executive Magistrate or a First Class Judicial Magistrate or a Notary Public as evidence of age and address.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Fees to be paid at the RTO/ARTO cash counter. <br>
+                    </li>
+                    <li>
+                        Minimum Age Requirements: <br>
+                        3.1 Age between 16 and 18 years: <br> 
+                        <ul>
+                            <li>The applicant shall have attained the age of 16 years in case of motor cycle with engine capacity not exceeding 50cc</li>
+                            <li>The consent/declaration of the parents/guardian is necessary and consent shall be given before the licencing authority.</li>
+                        </ul>
+                        3.2 Age 18 Years and above
+                        <ul>
+                            <li>The applicant shall have attained the age of 18 years in case of motor cycle with gear or light motor vehicle.</li>
+                        </ul>   
+                    </li>
+                    </ol>
+
+                </div>
+                <!--For DL-->
+                <div role="tabpanel" class="tab-pane fade" id="vtab2">
+                    <h3>Driving License</h3>
+                    <p> Mauris imperdiet dignissim ante, in efficitur mauris elementum sed. Cras vulputate malesuada magna. Morbi tincidunt eros a dui cursus, vitae dignissim nulla scelerisque. Duis pharetra scelerisque mi vel luctus. Cras eu purus efficitur, blandit nisi id, fringilla nulla.</p>
+                </div>
+                <!--For RWL-->
+                <div role="tabpanel" class="tab-pane fade in" id="vtab3">
+                    <h3>Renewal of License</h3>
+                    <p>Etiam id pharetra quam. Morbi tristique nunc vel sapien dapibus, sit amet imperdiet quam venenatis. Vestibulum et suscipit urna. Suspendisse volutpat quis est eu volutpat. Nulla non tortor venenatis turpis congue aliquet. Vivamus at elit vel massa elementum tempor sit amet sed odio. Nullam placerat, arcu sed ullamcorper ornare, erat erat placerat quam, in feugiat nulla purus in nunc. Maecenas vitae erat auctor, aliquam tellus et, vulputate eros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+
+	<script src='./scripts/jquery-2.1.4.min.js'></script>
+	<script src='./scripts/bootstrap.min.js'></script>
+</body>
+</html>
