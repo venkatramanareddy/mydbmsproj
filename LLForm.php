@@ -5,24 +5,14 @@
         <link rel = "stylesheet" type="text/css" href ="./styles/bootstrap.min.css" />
     </head>
     <body>
+	
+		<script>
+			function submitForm(){
+				document.forms["form_name"].submit();
+			}
+		</script>
         <!-- (Modal part)This is for displaying message after pressing submit button -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal-label" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModal-label">Confirm Submission</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Are you sure you wish to submit this form?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                        <button type="button" name = "submit" class="btn btn-primary">Confirm</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
 
         <!--This section contains navbar of the website-->
 
@@ -82,8 +72,8 @@
 					$dbc = mysqli_connect('127.0.0.1','root','manash1234@5','rto')
 					or die('error connecting db');
 					
-					$query = "INSERT INTO person(appl_id, f_name, l_name, dob_date, dob_month, dob_year, address_1, address_2, city, ph_num, e_mail, id_1, id_2, id1_name, id2_name, self_pic) 
-					          VALUES('$appl','$f_name','$l_name','$dob_date','$dob_month','$dob_year','$address_1','$address_2','$ll_district','$ph_num','$e_mail','$id1_type','$id2_type','$id1_name','$id2_name','$self_pic')";
+					$query = "INSERT INTO person(appl_id, f_name, l_name, dob_date, dob_month, dob_year, address_1, address_2, city, ph_num, e_mail, id_1, id_2, id1_name, id2_name, self_pic, status) 
+					          VALUES('$appl','$f_name','$l_name','$dob_date','$dob_month','$dob_year','$address_1','$address_2','$ll_district','$ph_num','$e_mail','$id1_type','$id2_type','$id1_name','$id2_name','$self_pic',0)";
 					
 					$query1 = "INSERT INTO ll(app_id, ll_num) VALUES('$appl','$appl')";
 					
@@ -94,6 +84,17 @@
 					or die('error querying db');
 					
 					mysqli_close($dbc);
+					?>
+					<h2>
+						<div class="container">
+						Congrats! Your Form has just been submitted!!
+						</div>
+						<div>
+							Your Applicant id is :<?php echo $appl ?>
+							<a href = "PrintApplicationLL.php?app_id=<?php echo $appl ?>">Click here to print the application form</a>
+						</div>
+					</h2>
+					<?php
 				}
 			}
 			else
@@ -125,7 +126,7 @@
                     <div class="form-group">
                         <label for="DOB" class="col-sm-4 control-label">Date of Birth:</label>
                         <div class="col-sm-4">
-                            <div class="col-sm-4"><input type="date" class="form-control" name="dob_date" value = "<?php echo $dob_date ?>" id="name" placeholder="Date"/>
+                            <div class="col-sm-4"><input type="number" min="1" max="31" class="form-control" name="dob_date" value = "<?php echo $dob_date ?>" id="name" placeholder="Date"/>
                             </div>
                             <div class="col-sm-4"><input type="month" class="form-control col-sm-3" name="dob_month" value = "<?php echo $dob_month ?>" id="name" placeholder="Month"/>
                             </div>
@@ -175,19 +176,19 @@
                         <label for="ID1type" class="col-sm-4 control-label">Document attached for Address proof:</label>
                         <div class="radio col-sm-4">
                             <label>
-                                <input type="radio" name="ID1type" id="input1" value="Aadhar" checked="checked">
+                                <input type="radio" name="id1_type" id="input1" value="Aadhar" checked="checked">
                                 Aadhar Card
                             </label><br/>
                             <label>
-                                <input type="radio" name="ID1type" id="input2" value="Voter ID">
+                                <input type="radio" name="id1_type" id="input2" value="Voter ID">
                                 Voter ID Card
                             </label><br/>
                             <label>
-                                <input type="radio" name="ID1type" id="input3" value="Ration Card">
+                                <input type="radio" name="id1_type" id="input3" value="Ration Card">
                                 Ration Card
                             </label><br/>
                             <label>
-                                <input type="radio" name="ID1type" id="input4" value="PAN Card">
+                                <input type="radio" name="id1_type" id="input4" value="PAN Card">
                                 PAN Card
                             </label>
                         </div>    
@@ -204,19 +205,19 @@
                         <label for="ID2type" class="col-sm-4 control-label">Document attached for Birth Proof:</label>
                         <div class="radio col-sm-4">
                             <label>
-                                <input type="radio" name="ID2type" id="input1" value="Birth Certificate" checked="checked">
+                                <input type="radio" name="id2_type" id="input1" value="Birth Certificate" checked="checked">
                                 Birth Certificate
                             </label><br/>
                             <label>
-                                <input type="radio" name="ID2type" id="input2" value="Voter ID">
+                                <input type="radio" name="id2_type" id="input2" value="Voter ID">
                                 Voter ID Card
                             </label><br/>
                             <label>
-                                <input type="radio" name="ID2type" id="input3" value="SSLC Marks Card">
+                                <input type="radio" name="id2_type" id="input3" value="SSLC Marks Card">
                                 SSLC Marks Card
                             </label><br/>
                             <label>
-                                <input type="radio" name="ID2type" id="input4" value="PAN Card">
+                                <input type="radio" name="id2_type" id="input4" value="PAN Card">
                                 PAN Card
                             </label>
                         </div>    
@@ -236,19 +237,49 @@
                             <input type="file" class="form-control" name="self_pic" id="name"/>
                         </div>
                     </div>
-                    <!--This is for displaying captcha(just attach your captcha code here)-->
-					
+					</br>
+					<input type = "submit" name = "submit" value = "submit">
+					<!--
+					 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal-label" aria-hidden="true">
+					 
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModal-label">Confirm Submission</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you wish to submit this form?</p>
+                    </div>
+                    <div class="modal-footer">
+						<input type="hidden" name="submit" value="Ask Question! " />
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="submit" name = "submit" onclick="submitForm();" class="btn btn-primary">Confirm</button>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="row">
+                <button type="button" class="col-md-offset-3 col-md-6 btn btn-success" data-toggle="modal" data-target="#myModal">Confirm</button>
+            </div>
+			-->
+        </div>
+        </div>
                     
                 </div>
             </form>
             
             <br />
-
+            
             <!-- Button to display modal -->
+			<!--
             <div class="row">
                 <button type="button" class="col-md-offset-3 col-md-6 btn btn-success" data-toggle="modal" data-target="#myModal">Confirm</button>
             </div>
+			-->
+			
         </div>
+		
 		<?php
 		 }
 		 ?>
